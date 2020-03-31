@@ -4,17 +4,17 @@
   "description": "lab",
   "main": "index.js",
   "dependencies": {
-     "http-server": "^0.12.0",
-     "jquery": "^3.4.1"
+    "http-server": "^0.12.1",
+    "jquery": "^3.4.1"
   },
   "devDependencies": {
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
-"webpack-dev-server": "^3.9.0"
+    "webpack-dev-server": "^3.9.0"
   },
   "scripts": {
-	"dev": "webpack-dev-server",
-	"server": "./node_modules/.bin/http-server dist -a localhost -p 8000 -c-1",
+    "dev": "webpack-dev-server",
+    "server": "./node_modules/.bin/http-server dist -a localhost -p 8000 -c-1",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack -p",
     "watch": "webpack --watch"
