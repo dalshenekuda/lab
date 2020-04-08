@@ -20,5 +20,26 @@ var url_r = 'https://api.vk.com/method/users.get?user_ids='+userId+'&fields=phot
 $('ul').html(html);
 		}
 		});
-
 }
+
+it('renders selector being enabled and visible', () => {
+  const { getByTestId } = render(<App />);
+  const selector = getByTestId('selector');
+  expect(selector).toBeInTheDocument();
+  expect(selector).toBeVisible();
+  expect(selector).toBeEnabled();
+});
+
+it('renders selector with correct initial text', () => {
+  const { getByTestId } = render(<App />);
+  const selector = getByTestId('selector');
+  expect(selector).toBeInTheDocument();
+  expect(selector).toHaveTextContent('Andorra');
+});
+
+it('renders correct initial image', () => {
+  const { getByTestId } = render(<App />);
+  const image = getByTestId('image');
+  expect(image).toBeInTheDocument();
+  expect(image).toHaveProperty('src','https://www.countryflags.io/AD/shiny/64.png');
+});
